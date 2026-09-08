@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agibank | O Banco Digital para Você</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-agibank-blue { background-color: #004691; }
+        .text-agibank-blue { color: #004691; }
+        .bg-agibank-yellow { background-color: #FFD100; }
+        .text-agibank-yellow { color: #FFD100; }
+        .border-agibank-yellow { border-color: #FFD100; }
+        .hover-scale { transition: transform 0.2s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-agibank-blue text-white sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-agibank-yellow text-agibank-blue font-extrabold px-3 py-1 rounded-md text-xl tracking-tighter">
+                    AGIBANK
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#produtos" class="hover:text-agibank-yellow transition-colors">Produtos</a>
+                <a href="#vantagens" class="hover:text-agibank-yellow transition-colors">Vantagens</a>
+                <a href="#app" class="hover:text-agibank-yellow transition-colors">Baixar App</a>
+                <a href="#" class="bg-agibank-yellow text-agibank-blue px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-all">Abrir Conta</a>
+            </div>
+
+            <button class="md:hidden" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-agibank-blue border-t border-blue-800 px-6 py-4 flex flex-col gap-4 text-center">
+            <a href="#produtos" class="py-2 hover:text-agibank-yellow">Produtos</a>
+            <a href="#vantagens" class="py-2 hover:text-agibank-yellow">Vantagens</a>
+            <a href="#app" class="py-2 hover:text-agibank-yellow">Baixar App</a>
+            <a href="#" class="bg-agibank-yellow text-agibank-blue px-5 py-2 rounded-full font-bold">Abrir Conta</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-agibank-blue text-white py-16 md:py-24">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 z-10">
+                <span class="bg-blue-800 text-agibank-yellow px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Simples e Digital</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    O banco que <span class="text-agibank-yellow">está ao seu lado</span> em cada conquista.
+                </h1>
+                <p class="text-lg text-blue-100 opacity-90 max-w-lg">
+                    Conta digital gratuita, empréstimos rápidos e a facilidade de resolver tudo pelo celular, sem filas e sem burocracia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#app" class="bg-agibank-yellow text-agibank-blue px-8 py-4 rounded-xl font-bold text-center hover-scale shadow-lg flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        Baixar Aplicativo
+                    </a>
+                    <a href="#" class="border-2 border-white/30 hover:border-agibank-yellow px-8 py-4 rounded-xl font-bold text-center transition-all flex items-center justify-center gap-2">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <!-- Mockup Phone -->
+                <div class="relative w-64 h-[500px] bg-gray-900 rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-800 rounded-b-xl z-20"></div>
+                    <div class="h-full w-full bg-agibank-blue p-6 flex flex-col justify-between text-white">
+                        <div class="mt-8 space-y-4">
+                            <div class="h-4 w-24 bg-blue-400/30 rounded"></div>
+                            <div class="h-12 w-full bg-white/10 rounded-lg flex items-center px-3 gap-2">
+                                <div class="w-4 h-4 bg-agibank-yellow rounded-full"></div>
+                                <div class="h-2 w-20 bg-white/20 rounded"></div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="h-20 bg-white/10 rounded-xl"></div>
+                                <div class="h-20 bg-white/10 rounded-xl"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8 p-4 bg-agibank-yellow rounded-2xl text-agibank-blue font-bold text-center text-sm">
+                            Saldo: R$ 2.450,00
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative circles -->
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-agibank-yellow/10 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="produtos" class="py-20 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-agibank-blue mb-4">Tudo o que você precisa em um só lugar</h2>
+            <div class="w-20 h-1 bg-agibank-yellow mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-agibank-blue transition-all group">
+                <div class="w-14 h-14 bg-blue-50 text-agibank-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-agibank-blue group-hover:text-white transition-colors">
+                    <i data-lucide="smartphone"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Conta Digital</h3>
+                <p class="text-gray-600 leading-relaxed">Abra sua conta em minutos e tenha acesso a Pix, transferências e pagamentos sem taxas abusivas.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-agibank-blue transition-all group">
+                <div class="w-14 h-14 bg-blue-50 text-agibank-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-agibank-blue group-hover:text-white transition-colors">
+                    <i data-lucide="banknote"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Crédito Facilitado</h3>
+                <p class="text-gray-600 leading-relaxed">Empréstimos com taxas competitivas e contratação 100% digital, direto no seu aplicativo.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-agibank-blue transition-all group">
+                <div class="w-14 h-14 bg-blue-50 text-agibank-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-agibank-blue group-hover:text-white transition-colors">
+                    <i data-lucide="credit-card"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Cartão Agibank</h3>
+                <p class="text-gray-600 leading-relaxed">Um cartão moderno para suas compras diárias com controle total de gastos via app.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section id="app" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="bg-agibank-blue rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row items-center">
+                <div class="p-12 md:w-1/2 text-white space-y-8">
+                    <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">
+                        Leve o Agibank <br><span class="text-agibank-yellow">no seu bolso</span>
+                    </h2>
+                    <p class="text-blue-100 text-lg">
+                        Tenha controle total da sua vida financeira onde quer que você esteja. Seguro, rápido e intuitivo.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <!-- Google Play Button -->
+                        <a href="https://github.com/guilhermeguiguix25-cpu/app-agibank/releases/download/v1.0.0/agibank.apk" class="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-gray-800 transition-all hover-scale border border-gray-700">
+                            <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+                            <div class="text-left">
+                                <div class="text-[10px] uppercase opacity-60 leading-none">Baixar APK</div>
+                                <div class="text-lg font-semibold leading-tight">Android</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 h-full flex justify-center p-12 bg-blue-700/30">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2503/2503701.png" alt="App Preview" class="w-64 h-64 object-contain drop-shadow-2xl animate-bounce-slow" style="animation: bounce 3s infinite ease-in-out">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1 space-y-6">
+                    <div class="bg-agibank-blue text-agibank-yellow font-extrabold px-3 py-1 rounded-md text-xl inline-block tracking-tighter">
+                        AGIBANK
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Transformando a experiência bancária para quem busca simplicidade e respeito.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-agibank-blue mb-6">Institucional</h4>
+                    <ul class="space-y-4 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Sobre Nós</a></li>
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Trabalhe Conosco</a></li>
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Imprensa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-agibank-blue mb-6">Ajuda</h4>
+                    <ul class="space-y-4 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Central de Ajuda</a></li>
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Segurança</a></li>
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Contatos</a></li>
+                        <li><a href="#" class="hover:text-agibank-blue transition-colors">Ouvidoria</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-agibank-blue mb-6">Siga-nos</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-agibank-blue hover:text-white transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-agibank-blue hover:text-white transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-agibank-blue hover:text-white transition-all">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-100 text-center text-gray-400 text-xs">
+                <p>&copy; 2026 Agibank. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // App Download Function
+        function downloadApp(platform) {
+            const platformName = platform === 'apple' ? 'App Store' : 'Google Play';
+            
+            // Simulação de ação de download
+            const btn = event.currentTarget;
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> <div class="text-left text-xs">Redirecionando...</div>`;
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                alert(`Você será redirecionado para a ${platformName} para baixar o App Agibank!`);
+                btn.innerHTML = originalContent;
+                lucide.createIcons();
+            }, 1500);
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <style>
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce 3s infinite ease-in-out;
+        }
+    </style>
+</body>
+</html>
